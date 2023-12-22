@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="module">
+import RefreshRuntime from "/@react-refresh"
+RefreshRuntime.injectIntoGlobalHook(window)
+window.$RefreshReg$ = () => {}
+window.$RefreshSig$ = () => (type) => type
+window.__vite_plugin_react_preamble_installed__ = true
+</script>
+
+    <script type="module" src="LISA%20Graph_files/client"></script>
+
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="http://localhost:5173/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISA Graph</title>
+  <style type="text/css" data-vite-dev-id="/home/suwilanji/hq/graph/client/src/index.css">/*
+! tailwindcss v3.4.0 | MIT License | https://tailwindcss.com
+*//*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  font-feature-settings: normal; /* 5 */
+  font-variation-settings: normal; /* 6 */
+  -webkit-tap-highlight-color: transparent; /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-feature-settings: normal; /* 2 */
+  font-variation-settings: normal; /* 3 */
+  font-size: 1em; /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-feature-settings: inherit; /* 1 */
+  font-variation-settings: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+.fixed {
+  position: fixed;
+}
+.bottom-0 {
+  bottom: 0px;
+}
+.left-0 {
+  left: 0px;
+}
+.bottom-3 {
+  bottom: 0.75rem;
+}
+.mb-\[200px\] {
+  margin-bottom: 200px;
+}
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+.hidden {
+  display: none;
+}
+.h-\[45px\] {
+  height: 45px;
+}
+.h-full {
+  height: 100%;
+}
+.max-h-\[500px\] {
+  max-height: 500px;
+}
+.max-h-\[400px\] {
+  max-height: 400px;
+}
+.w-full {
+  width: 100%;
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.flex-col {
+  flex-direction: column;
+}
+.place-items-center {
+  place-items: center;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
+}
+.gap-3 {
+  gap: 0.75rem;
+}
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(2rem * var(--tw-space-x-reverse));
+  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+.space-y-10 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+}
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+.rounded-md {
+  border-radius: 0.375rem;
+}
+.bg-gray-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+.bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+.bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+.from-gray-300 {
+  --tw-gradient-from: #d1d5db var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(209 213 219 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.via-gray-700 {
+  --tw-gradient-to: rgb(55 65 81 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #374151 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+.to-gray-900 {
+  --tw-gradient-to: #111827 var(--tw-gradient-to-position);
+}
+.p-2 {
+  padding: 0.5rem;
+}
+.p-3 {
+  padding: 0.75rem;
+}
+.p-4 {
+  padding: 1rem;
+}
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.pb-\[200px\] {
+  padding-bottom: 200px;
+}
+.text-center {
+  text-align: center;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.font-bold {
+  font-weight: 700;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.text-\[\#37fd12\] {
+  --tw-text-opacity: 1;
+  color: rgb(55 253 18 / var(--tw-text-opacity));
+}
+.text-gray-100 {
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity));
+}
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+.text-green-400 {
+  --tw-text-opacity: 1;
+  color: rgb(74 222 128 / var(--tw-text-opacity));
+}
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.invert {
+  --tw-invert: invert(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+@media (min-width: 640px) {
+
+  .sm\:static {
+    position: static;
+  }
+
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:flex {
+    display: flex;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
+
+  .sm\:h-full {
+    height: 100%;
+  }
+
+  .sm\:w-\[200px\] {
+    width: 200px;
+  }
+
+  .sm\:w-\[300px\] {
+    width: 300px;
+  }
+
+  .sm\:w-fit {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sm\:flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .sm\:flex-col {
+    flex-direction: column;
+  }
+
+  .sm\:justify-normal {
+    justify-content: normal;
+  }
+
+  .sm\:justify-between {
+    justify-content: space-between;
+  }
+
+  .sm\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(2rem * var(--tw-space-x-reverse));
+    margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .sm\:space-y-8 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+  }
+
+  .sm\:space-y-10 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+  }
+
+  .sm\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .sm\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .sm\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .sm\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+@media (min-width: 768px) {
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}</style></head>
+  <body>
+    <div id="root"><div class="fixed w-full h-full bg-gray-700 sm:flex sm:flex-row-reverse"><div class="w-full h-full"><div><div class="px-2 bg-gray-900"><div class="flex justify-between p-2 items-center"><p class="text-3xl text-white font-bold"><img src="LISA%20Graph_files/logo.png" class="h-[45px] filter invert"></p><a href="http://localhost:5173/search"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="text-2xl font-semibold text-gray-300" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path></svg></a></div></div></div><div class="w-full h-full"><div class="w-full h-full overflow-y-scroll pb-[200px]"><div class="p-3"><div class="flex flex-col items-center p-3"><p class="text-2xl text-white font-bold">TOP GAINERS</p></div><div class="grid grid-cols-2 md:grid-cols-3 place-items-center gap-3"><div class="flex w-full bg-gray-800 p-3 rounded-md justify-between"><p class="text-gray-100">ATEL</p><p class="text-[#37fd12]">26.250%</p></div><div class="flex w-full bg-gray-800 p-3 rounded-md justify-between"><p class="text-gray-100">ZSUG</p><p class="text-[#37fd12]">17.000%</p></div><div class="flex w-full bg-gray-800 p-3 rounded-md justify-between"><p class="text-gray-100">ZCCM</p><p class="text-[#37fd12]">4.020%</p></div><div class="flex w-full bg-gray-800 p-3 rounded-md justify-between"><p class="text-gray-100">CECZ</p><p class="text-[#37fd12]">3.690%</p></div><div class="flex w-full bg-gray-800 p-3 rounded-md justify-between"><p class="text-gray-100">PUMA</p><p class="text-[#37fd12]">0.900%</p></div><div class="flex w-full bg-gray-800 p-3 rounded-md justify-between"><p class="text-gray-100">ZNCO</p><p class="text-[#37fd12]">0.610%</p></div><div class="flex w-full bg-gray-800 p-3 rounded-md justify-between"><p class="text-gray-100">CHIL</p><p class="text-[#37fd12]">0.420%</p></div><div class="flex w-full bg-gray-800 p-3 rounded-md justify-between"><p class="text-gray-100">ZMFA</p><p class="text-[#37fd12]">0.200%</p></div><div class="flex w-full bg-gray-800 p-3 rounded-md justify-between"><p class="text-gray-100">SCBL</p><p class="text-[#37fd12]">0.190%</p></div><div class="flex w-full bg-gray-800 p-3 rounded-md justify-between"><p class="text-gray-100">BATA</p><p class="text-[#37fd12]">0.150%</p></div><div class="flex w-full bg-gray-800 p-3 rounded-md justify-between"><p class="text-gray-100">BATZ</p><p class="text-[#37fd12]">0.040%</p></div><div class="flex w-full bg-gray-800 p-3 rounded-md justify-between"><p class="text-gray-100">ZFCO</p><p class="text-[#37fd12]">0.020%</p></div></div></div><div class=""><div class="flex flex-col items-center p-3"><p class="text-2xl text-white font-bold">TODAY'S MARKET</p></div><div class="place-items-center gap-3 grid md:grid-cols-2 lg:grid-cols-4 p-3"><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">AECI</p><p class="text-white">41.98</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">ATEL</p><p class="text-white">43.5</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">BATA</p><p class="text-white">2.7</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">BATZ</p><p class="text-white">1.95</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">CCAF</p><p class="text-white">0.44</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">CECZ</p><p class="text-white">7.41</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="text-red-500 text-gray-300 false font-semibold text-sm">-0.040 (0.6702%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">CHIL</p><p class="text-white">13.8</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">EIZP</p><p class="text-white">2</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">FARM</p><p class="text-white">4.7</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">INVE</p><p class="text-white">25</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">LUSE</p><p class="text-white">0.1</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">MAFS</p><p class="text-white">1.86</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">NANG</p><p class="text-white">6</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">NATB</p><p class="text-white">4.1</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">PMDZ</p><p class="text-white">0.71</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">PUMA</p><p class="text-white">2.5</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">REIZ</p><p class="text-white">1.15</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">RELA</p><p class="text-white">0.01</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">SCBL</p><p class="text-white">1.5</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="text-red-500 text-gray-300 false font-semibold text-sm">-0.010 (0.6623%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">SHOP</p><p class="text-white">64</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">ZABR</p><p class="text-white">7</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">ZCCM</p><p class="text-white">42</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">ZFCO</p><p class="text-white">2.53</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">ZMBF</p><p class="text-white">2.54</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">ZMFA</p><p class="text-white">4.9</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">ZMRE</p><p class="text-white">2.8</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">ZNCO</p><p class="text-white">3.8</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (0%)</p></div></div><div class="p-2 space-y-2 w-full bg-gray-800 rounded-md"><div class="flex justify-between"><p class="text-white">ZSUG</p><p class="text-white">35</p></div><div class="flex justify-between"><p class="text-gray-400 font-semibold">2023-12-12</p><p class="false text-gray-300 false font-semibold text-sm">0.000 (1.4085%)</p></div></div></div></div><div><div class="flex flex-col items-center p-3"><p class="text-2xl text-white font-bold">COMPANIES ON THE MARKET</p></div><div class="grid grid-cols-2 lg:grid-cols-4 gap-3 p-3 place-items-center"><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">SHOP</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">CHIL</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">REIZ</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">EIZP</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">SCBL</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">NANG</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">BATA</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">MAFS</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">CECZ</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">FARM</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">ATEL</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">BATZ</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">CCAF</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">ZFCO</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">ZMFA</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">PRLA</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">ZSUG</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">NATB</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">ZNCO</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">ZABR</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">CCHZ</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">ZCCM</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">PUMA</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">LUSE</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">AECI</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">ZMRE</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">RELA</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">INVE</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">PMDZ</p></div><div class="p-4 bg-gray-800 w-full rounded-md shadow-lg bg-gradient-to-br from-gray-300 via-gray-700 to-gray-900"><p class="text-green-400 text-2xl font-semibold text-center">ZMBF</p></div></div></div></div></div></div><div><div class="h-full"><div class="hidden sm:block sm:static sm:w-fit sm:px-3 sm:h-full sm:justify-between sm:py-12 sm:flex sm:flex-col py-2 items-center bg-gray-900"><div class="flex flex-col items-center space-y-10"><a href="http://localhost:5173/"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="text-3xl text-gray-300" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></a><a href="http://localhost:5173/"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="text-3xl text-gray-300" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M22 3l-1.67 1.67L18.67 3 17 4.67 15.33 3l-1.66 1.67L12 3l-1.67 1.67L8.67 3 7 4.67 5.33 3 3.67 4.67 2 3v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V3zM11 19H4v-6h7v6zm9 0h-7v-2h7v2zm0-4h-7v-2h7v2zm0-4H4V8h16v3z"></path></svg></a><a href="http://localhost:5173/"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512" class="text-5xl text-gray-300 sm:text-3xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"></path></svg></a><a href="http://localhost:5173/"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="text-3xl text-gray-300" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg></a></div><a class="sm:align-self-end" href="http://localhost:5173/"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="text-3xl text-gray-300" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></a></div><div class="sm:hidden fixed bottom-0 flex justify-around bg-gray-900"><a href="http://localhost:5173/"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="text-3xl text-gray-300" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></a><a href="http://localhost:5173/"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="text-3xl text-gray-300" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M22 3l-1.67 1.67L18.67 3 17 4.67 15.33 3l-1.66 1.67L12 3l-1.67 1.67L8.67 3 7 4.67 5.33 3 3.67 4.67 2 3v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V3zM11 19H4v-6h7v6zm9 0h-7v-2h7v2zm0-4h-7v-2h7v2zm0-4H4V8h16v3z"></path></svg></a><a href="http://localhost:5173/"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512" class="text-5xl text-gray-300 sm:text-3xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"></path></svg></a><a href="http://localhost:5173/"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="text-3xl text-gray-300" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg></a><a class="sm:align-self-end" href="http://localhost:5173/"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="text-3xl text-gray-300" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></a></div></div></div></div></div>
+    <script type="module" src="LISA%20Graph_files/main.jsx"></script>
+  
+
+</body></html>
