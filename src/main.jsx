@@ -52,7 +52,7 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
 
 });
 const httpLink = createHttpLink({
-  uri: 'https://lisagraph.vercel.app/graphql/'
+  uri: 'https://lisagraphapi.vercel.app/graphql/'
 });
 const client = new ApolloClient({
   link: from([errorLink, httpLink]),
